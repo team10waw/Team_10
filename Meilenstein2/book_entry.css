@@ -1,0 +1,106 @@
+
+span{
+     margin:-52%;
+	 width:10px;
+}
+
+ #genre_1 {
+    float: right;
+    margin-left: 25%;
+    margin-right: 0;
+	color:black;
+	font-size: 14px;
+}
+
+ #genre_2 {
+    float: right;
+    margin-left: 18%;
+    margin-right: 32%;
+	color:black;
+	font-size: 14px;
+}
+
+#text-unter {
+    margin-top: 28%;
+}
+
+#favorite{
+     width:114%;
+     }
+
+label {
+    margin: 0 78px 0 0;
+}
+
+#genre{
+     margin-right:50;
+}
+
+.feld {
+     border-color: black;
+     border-style: solid;
+     border-width: 1px;
+     height: 18px;
+     padding: 0;
+     width: 149px;
+	 text-align:right;
+	  
+	  
+}	 
+
+.feld:focus { 
+    outline: none;
+    border-color: rgb(63,72,204);
+    box-shadow: 0 0 10px #9ecaed;
+}
+	 
+body fieldset { background-color:rgb(153,217,234) ;
+            padding: 90px
+		 }
+	 
+#text-right{ 
+         float:right;
+		 }
+#text-right input{ 
+         float:right;
+		 }
+	 
+#text-left{ 
+         float:left;
+		 width:50%;
+		 }
+#text-left input{ 
+         float:right;
+		 }
+		 
+.schrifft_gross{ color:rgb(63,72,204);
+                  font-weight: bold;
+			      font-size: 16px;
+				  width:59%;
+              }
+h1{ 
+     color:rgb(63,72,204);
+     font-weight: bold;
+     text-align:center ;
+	 font-size: 22px;
+              }
+.schrifft_klein{ 
+             color:rgb(63,72,204);
+               }
+#send input{
+	 border-style: solid;
+     border-color: rgb(63,72,204);
+	 background-color: rgb(0,162,232);
+	 padding: 4px  50px;
+	 color: rgb(63,72,204);
+	 font-weight: bold;
+}
+#send {
+     text-align:center;
+}
+#send  input:value{
+     color:rgb(63,72,204);
+    }
+	
+
+	
