@@ -1,0 +1,66 @@
+span{
+
+	color: rgb(0,0,0);
+	font-weight: bold;
+}
+
+.blue_text{
+
+	color: rgb(63,72,204);
+}
+
+#image_text {
+
+	font-size: 72px;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.black_text{
+
+	color: rgb(0,0,0);
+}
+
+#image {
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgb(63,72,204);
+}
+
+body fieldset { 
+
+	background-color:rgb(153,217,234) ;
+    padding: 90px
+ }
+
+ #title{
+
+ 	font-size: 22px;
+ 	text-align: center;
+ 	font-weight: bold;
+ }
+
+ #table{
+
+ 	border-color: rgb(63,72,204);
+ 	border-width: 5px;
+ 	border-style: solid;
+ 	margin: 0, 50,0;
+ 	text-align: center;
+
+ }
+
+ .text_bottom{
+
+ 	font-size: 18px;
+ 	font-weight: bold;
+ 	text-align: center;
+ }
+
+.text_bottom input: value{
+
+	color: rgb(0, 162, 232);
+
+}
