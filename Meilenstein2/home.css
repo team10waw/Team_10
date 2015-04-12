@@ -1,10 +1,11 @@
 #menu {
     border-color: rgb(63, 72, 204);
     float: right;
-    padding-right: 495px;
     text-align: center;
-    width: 240px;
-
+    padding-right: 485px; 
+	padding-bottom: 0px;
+    width: 246px;
+	height: 177px; 
 }
 
 .blue_text_image{
@@ -63,6 +64,7 @@ span{
 
 
 #image {
+	background-color: black; 
 	border-width: 5px;
 	border-style: solid;
 	border-color: rgb(63,72,204);
