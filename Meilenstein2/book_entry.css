@@ -1,6 +1,6 @@
 
 .global{
-
+	padding-right: 61px;
 	height: 497px; width: 1144px;
 }
 
@@ -49,6 +49,7 @@ label {
      padding: 0;
      width: 149px;
 	 text-align:right;
+	 padding-right: 7px;
 	   
 	  
 }
@@ -113,8 +114,8 @@ h1{
     border-width: 4px;
     color: rgb(63, 72, 204);
     font-weight: bold;
-    margin-top: 50px;
-    padding: 10px 117px;
+    margin-top: 64px;
+    padding: 10px 117px; 
 }
 
 

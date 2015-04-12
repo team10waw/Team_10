@@ -1,10 +1,12 @@
 #menu {
     border-color: rgb(63, 72, 204);
     float: right;
-    padding-right: center;
     text-align: center;
-    vertical-align: center;
-    width: 240px;
+    padding-right: 485px; 
+	padding-bottom: 0px;
+    width: 246px;
+	height: 177px; 
+	
 
 }
 
@@ -64,6 +66,7 @@ span{
 
 
 #image {
+	background-color: black; 
 	border-width: 5px;
 	border-style: solid;
 	border-color: rgb(63,72,204);
