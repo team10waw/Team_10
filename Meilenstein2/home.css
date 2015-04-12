@@ -1,15 +1,14 @@
 #menu {
     border-color: rgb(63, 72, 204);
     float: right;
-    padding-right: center;
+    padding-right: 495px;
     text-align: center;
-    vertical-align: center;
     width: 240px;
 
 }
 
 .blue_text_image{
-	padding: 45;
+	padding: 8px;
 	color: rgb(63,72,204);
 }
 
@@ -53,7 +52,7 @@ span{
 	font-size: 72px;
 	font-weight: bold;
 	text-align: center;
-	padding-bottom: 30px
+	padding-bottom: 20px
 
 }
 
