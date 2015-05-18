@@ -1,36 +1,54 @@
 function chekFormular() {
 
 	var error = false;
+	var focus = false;
 
 	// Vorname, Name und  Buchautor dürfen nur Buchstaben enthalten
 
 	//vorname
-	if (document.Formular.vorname.value.search(/^[a-zA-Z ]+$/) == -1) {
+	if (document.Formular.vorname.value.search(/^[a-zäöüßA-ZÄÖÜ ]+$/) == -1) {
 
 		error = true;
 		document.Formular.vorname.style.borderWidth = "2px";
 		document.Formular.vorname.style.borderColor = "red";
-		document.Formular.vorname.focus();
+		
+		if(focus == false){
+			focus = true ;
+			document.Formular.vorname.focus();
+		}
+		
 
 	}
 
 	//Name
-	if (document.Formular.name.value.search(/^[a-zA-Z ]+$/) == -1) {
+	if (document.Formular.name.value.search(/^[a-zäöüßA-ZÄÖÜ ]+$/) == -1) {
 
 		error = true;
 		document.Formular.name.style.borderWidth = "2px";
 		document.Formular.name.style.borderColor = "red";
-		document.Formular.name.focus();
+		
+		if(focus == false){
+			focus = true ;
+			document.Formular.name.focus();
+		}
+		
+		
 
 	}
 
 	// Buchautor
-	if (document.Formular.autor.value.search(/^[a-zA-Z ]+$/) == -1) {
+	if (document.Formular.autor.value.search(/^[a-zäöüßA-ZÄÖÜ ]+$/) == -1) {
 
 		error = true;
 		document.Formular.autor.style.borderWidth = "2px";
 		document.Formular.autor.style.borderColor = "red";
-		document.Formular.autor.focus();
+		
+		if(focus == false){
+			focus = true ;
+			document.Formular.autor.focus();
+		}
+		
+		
 
 	}
 
@@ -41,7 +59,13 @@ function chekFormular() {
 			error = true;
 			document.Formular.isbn.style.borderWidth = "2px";
 			document.Formular.isbn.style.borderColor = "red";
+			
+			if(focus == false){
+			focus = true ;
 			document.Formular.isbn.focus();
+			}
+			
+			
 		}
 
 	} else {
@@ -49,7 +73,13 @@ function chekFormular() {
 		error = true;
 		document.Formular.isbn.style.borderWidth = "2px";
 		document.Formular.isbn.style.borderColor = "red";
-		document.Formular.isbn.focus();
+		
+		if(focus == false){
+			focus = true ;
+			document.Formular.isbn.focus();
+		}
+		
+		
 
 	}
 
@@ -66,7 +96,13 @@ function chekFormular() {
 					error = true;
 					document.Formular.jahr.style.borderWidth = "2px";
 					document.Formular.jahr.style.borderColor = "red";
-					document.Formular.jahr.focus();
+					
+					if(focus == false){
+						focus = true ;
+						document.Formular.jahr.focus();
+					}
+					
+					
 
 				};
 
@@ -75,7 +111,13 @@ function chekFormular() {
 				error = true;
 				document.Formular.jahr.style.borderWidth = "2px";
 				document.Formular.jahr.style.borderColor = "red";
-				document.Formular.jahr.focus();
+				
+				if(focus == false){
+						focus = true ;
+						document.Formular.jahr.focus();
+				}
+				
+				
 
 			};
 		} else {
@@ -83,7 +125,13 @@ function chekFormular() {
 			error = true;
 			document.Formular.jahr.style.borderWidth = "2px";
 			document.Formular.jahr.style.borderColor = "red";
-			document.Formular.jahr.focus();
+			
+			if(focus == false){
+				focus = true ;
+				document.Formular.jahr.focus();
+			}
+			
+			
 		}
 
 	} else {
@@ -91,7 +139,13 @@ function chekFormular() {
 		error = true;
 		document.Formular.jahr.style.borderWidth = "2px";
 		document.Formular.jahr.style.borderColor = "red";
-		document.Formular.jahr.focus();
+		
+		if(focus == false){
+			focus = true ;
+			document.Formular.jahr.focus();
+		}
+		
+		
 
 	}
 
@@ -103,7 +157,13 @@ function chekFormular() {
 			error = true;
 			document.Formular.auflage.style.borderWidth = "2px";
 			document.Formular.auflage.style.borderColor = "red";
-			document.Formular.auflage.focus();
+			
+			if(focus == false){
+				focus = true ;
+				document.Formular.auflage.focus();
+			}
+			
+			
 		}
 
 	} else {
@@ -111,7 +171,13 @@ function chekFormular() {
 		error = true;
 		document.Formular.auflage.style.borderWidth = "2px";
 		document.Formular.auflage.style.borderColor = "red";
-		document.Formular.auflage.focus();
+		
+		if(focus == false){
+			focus = true ;
+			document.Formular.auflage.focus();
+		}
+		
+		
 
 	}
 

@@ -1,62 +1,35 @@
-<!DOCTYPE >
-<html>
-	<head>
-		<title>Meine Bücher</title>
-		<meta http-equiv="content-type" content="text/html" charset ="UTF-8" />
-		<link rel="stylesheet" type="text/css" href="index.css"/>
 
-	</head>
-	<body>
-
-		<fieldset>
-
-			<h1>Meine Bücher</h1>
-			<br>
-			<div id="menu">
-
-				<button  id="horror" type="button" onclick="getData('horror')">
-					Horror
-				</button><button id="roman" type="button" onclick="getData('roman')">
-					Roman
-				</button>
-
-			</div>
-
-			<br>
-			
-			<div id="table_data">
-				
-			</div>
-
-		</fieldset>
-
-	</body>
-
-
-
-<script type="text/javascript">
 	function getData(book_type) {
 
+	
+	// Unterscheid erst mal welches Buch Type gelesen wird
+	
 		if (book_type == "roman") {
 
-			//Button selectiert
+			//Button  Roman als selectiert markieren
 			document.getElementById("roman").style.backgroundColor = "rgb(63, 72, 204)";
 			document.getElementById("horror").style.backgroundColor = "rgb(0,162,232)";
 
 			// entfern alte Tabelle, wenn Vorhand
 			var div = document.getElementById("table_data");
-			var alt_table = document.getElementById("horrordata");
-			if ( typeof (alt_table) != 'undefined' && alt_table != null) {
-				div.removeChild(alt_table);
+			var alt_table_horror = document.getElementById("horrordata");
+			var alt_table_roman = document.getElementById("romandata");
+			if ( typeof (alt_table_horror) != 'undefined' && alt_table_horror != null) {
+				div.removeChild(alt_table_horror);
 			}
-			// legt eine neue Tabelle ein
+			if(typeof (alt_table_roman) != 'undefined' && alt_table_roman != null){
+				div.removeChild(alt_table_roman);
+			}
+			
+			// legt eine neue Tabelle  Roman ein
 			var table_roman = document.createElement("table");
 			table_roman.id = "romandata";
-			table_roman.style.marginLeft = "192px";
-			table_roman.style.marginRight = "195px";
+			table_roman.style.marginLeft = "183px";
+			table_roman.style.marginRight = "183px";
 			var tr = document.createElement("tr");
 
-			// Titel Tabelle
+			
+			//  Tabelle Titel
 
 			var autor = document.createTextNode("Autor");
 			var th1 = document.createElement("th");
@@ -96,39 +69,48 @@
 			table_roman.appendChild(tr);
 			div.appendChild(table_roman);
 
+			
 			// list Data aus Json-File und schreibt in der Tabelle
 			var file_name = "roman_books.json";
 			read_file_roman(file_name);
 
 		} else {
 
-			//Button selectiert
+			//Button als selectiert markieren
 			document.getElementById("horror").style.backgroundColor = "rgb(63, 72, 204)";
 			document.getElementById("roman").style.backgroundColor = "rgb(0,162,232)";
 
 			// entfernt alte Tabelle, wenn vorhand
 			var div = document.getElementById("table_data");
-			var alt_table = document.getElementById("romandata");
-			if ( typeof (alt_table) != 'undefined' && alt_table != null) {
-
-				div.removeChild(alt_table);
+			var alt_table_horror = document.getElementById("horrordata");
+			var alt_table_roman = document.getElementById("romandata");
+			if ( typeof (alt_table_horror) != 'undefined' && alt_table_horror != null) {
+				div.removeChild(alt_table_horror);
+			}
+			if(typeof (alt_table_roman) != 'undefined' && alt_table_roman != null){
+				div.removeChild(alt_table_roman);
 			}
 
-			// legt eine neue Tabelle ein
+			// legt eine neue Tabelle Horror ein
 			var table_roman = document.createElement("table");
 			table_roman.id = "horrordata";
-			table_roman.style.marginLeft = "181px";
+			table_roman.style.marginLeft = "183px";
+			table_roman.style.marginRight = "183px";
 			var tr = document.createElement("tr");
 
-			// Titel Tabelle
+			
+			//  Tabelle Titel
 
 			var autor = document.createTextNode("Autor");
 			var th1 = document.createElement("th");
+			
 			th1.appendChild(autor);
 			tr.appendChild(th1);
 
 			var titel = document.createTextNode("Titel");
 			var th2 = document.createElement("th");
+			th2.style.width = "200px";
+			th2.style.height = "20px" ;
 			th2.appendChild(titel);
 			tr.appendChild(th2);
 
@@ -160,6 +142,7 @@
 			table_roman.appendChild(tr);
 			div.appendChild(table_roman);
 
+			
 			// list Data aus Json-File und schreibt in die Tabelle
 			var file_name = "horror_books.json";
 			read_file_horror(file_name);
@@ -168,6 +151,11 @@
 
 	}
 
+	
+	/**
+	 * Die Methode das Verzeichnis für eine Json File(Roman)
+	 * liest die Json Daten und schreibt dann in die Tabelle Roman
+	*/
 	function read_file_roman(file_name) {
 
 		var req = new XMLHttpRequest();
@@ -226,6 +214,11 @@
 		req.send(null);
 
 	}
+	
+	/**
+	 * Die Methode das Verzeichnis für eine Json File(Horror)
+	 * liest die Json Daten und schreibt dann in die Tabelle Horror
+	*/
 
 	function read_file_horror(file_name) {
 
@@ -286,8 +279,6 @@
 
 	}
 	
+	
+	// Bei dem initialen Aufruf der Seite wird Horror bereit selektiert
 	getData('horror');
-
-</script>
-
-</html>
