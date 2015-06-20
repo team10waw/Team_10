@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Buch anlegen</title>
+		<link rel="stylesheet" type="text/css" href="../css/book_entry.css"/>
+		<script language="javascript" type="text/javascript" src="../js/chekFormular.js"></script>
+	</head>
+	<body>
+		<form name="Formular" action="http://localhost/Meilenstein5/php/buchanlegen.php" method="POST">
+
+			<fieldset>
+				
+				<div id="global">
+							<h1>Buch anlegen</h1>
+							
+							
+							
+							<div id="text-left">
+								 <div class="schrifft_gross" >Titel des Buches <span><input class="feld" type="text" name="titel"></span></div><br>
+								 <div class="schrifft_gross" >Buchautor <span><input class="feld" type="text" name="autor"></span></div><br>
+								 <div class="schrifft_gross" >ISBN <input class="feld" type="number" name="isbn" min="0"></div><br>
+								 <div class="schrifft_gross" >
+									<div id="artBuch">	
+										 <label>Art des Buches</label> 
+										 <select class="feld" name="art" size="1" style="border-bottom-width: 2px;">
+												<option value="eBook">eBook</option>
+												<option value="Newspaper">Newspaper</option>
+												<option value="Taschenbuch">Taschenbuch</option> 
+												<option value="Lexikon">Lexikon</option>
+												<option value="Hardcover" selected="selected">Hardcover</option>
+												<option value="Paperback">Paperback</option>
+										 </select>
+									</div>		
+								 </div><br>
+								 <div class="schrifft_gross" >Kapitel <input class="feld" type="number" name="kapitel" min="0"></div><br>
+								 <div class="schrifft_gross" >Erscheinungsjahr <input class="feld" type="number" name="jahr" min="0"></div><br>
+								 <div class="schrifft_gross" >Auflage <input class="feld" type="number" name="auflage" min="0"></div><br><br>
+							</div>
+							
+							
+							<div id="text-right">
+								 <div id="input_right1" class="schrifft_klein"><span>Ihr Vorname </span><input class="feld" type="text" name="vorname"></div><br>
+								 <div id="input_right2" class="schrifft_klein"><span>Ihr Nachname </span><input class="feld" type="text" name="name"></div><br>
+								 <div  class="schrifft_klein" ><span>Favorit markieren </span><input id="favorite" class="feld" type="checkbox" name="filmfavorit"></div> 
+							</div>
+							
+							<div id="text-unter">
+								   <div class="schrifft_gross" >
+									 <label for="genre" id="genre">Genre: </label><br>
+										
+										<div id="genre_2">
+											 <input type="checkbox" name="genre" value="Doku">Doku<br>
+											 <input type="checkbox" name="genre" value="Komödie">Komödie<br>
+											 <input type="checkbox" name="genre" value="Romanze">Romanze
+										 </div>
+										
+										<div id="genre_1">
+											 <input type="checkbox" name="genre" value="Horror" checked >Horror<br>
+											 <input type="checkbox" name="genre" value="Psycho">Psycho<br>
+											 <input type="checkbox" name="genre" value="Krimi">Krimi
+										</div>						
+										
+								   </div>
+							</div>
+							
+
+							<div id="send"><input type="submit" name="uebertragen" value="Absenden" onclick="return chekFormular()"></div>
+							
+				</div>			
+			</fieldset>
+		</form>
+		
+		
+
+
+	</body>	
+	</html>
+

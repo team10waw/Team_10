@@ -1,0 +1,42 @@
+<!DOCTYPE >
+<html>
+	<head>
+		<title>Meine Bücher</title>
+		<meta http-equiv="content-type" content="text/html" charset ="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="../css/book.css"/>
+		<script language="javascript" type="text/javascript" src="../js/read_json_file.js"></script>
+		
+	</head>
+	<body>
+
+		<fieldset>
+
+			<h1>Meine Bücher</h1>
+			<br>
+			<div id="menu">
+
+				<button  id="horror" type="button" onclick="getData('horror')">
+					Horror
+				</button><button id="roman" type="button" onclick="getData('roman')">
+					Roman
+				</button>
+
+			</div>
+
+			<br>
+			
+			<div id="table_data">
+				
+			</div>
+
+		</fieldset>
+
+	</body>
+	
+	<script type="text/javascript">
+			// Bei dem initialen Aufruf der Seite wird Horror bereit selektiert
+			getData('horror');
+	</script>
+		
+
+</html>
