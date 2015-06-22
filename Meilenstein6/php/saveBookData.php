@@ -2,7 +2,7 @@
 include "mysqlConnect.php";
 
 /**
-Die Datei Schreibt Json Daten in der Datenbank und  darf nur ein mal aufgerufen werden
+Die Datei darf nur ein mal aufgerufen werden
 */
  // $buchart = Array("../js/roman_books.json", "../js/horror_books.json");
   

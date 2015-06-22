@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title>Buch anlegen</title>
 		<link rel="stylesheet" type="text/css" href="../css/book_entry.css"/>
-		<script language="javascript" type="text/javascript" src="../js/chekFormular.js"></script>
+		<!--<script language="javascript" type="text/javascript" src="../js/chekFormular.js"></script>-->
 	</head>
 	<body>
 		<form name="Formular" action="http://localhost/Meilenstein6/php/buchanlegen.php" method="POST">
@@ -21,7 +21,7 @@
 							<div id="text-left">
 								 <div class="schrifft_gross" >Titel des Buches <span><input class="feld" type="text" name="titel"></span></div><br>
 								 <div class="schrifft_gross" >Buchautor <span><input class="feld" type="text" name="autor"></span></div><br>
-								 <div class="schrifft_gross" >ISBN <input class="feld" type="number" name="isbn" min="0"></div><br>
+								 <div class="schrifft_gross" >ISBN <input class="feld" type="number" name="isbn" min="1"></div><br>
 								 <div class="schrifft_gross" >
 									<div id="artBuch">	
 										 <label>Art des Buches</label> 
@@ -35,9 +35,9 @@
 										 </select>
 									</div>		
 								 </div><br>
-								 <div class="schrifft_gross" >Kapitel <input class="feld" type="number" name="kapitel" min="0"></div><br>
-								 <div class="schrifft_gross" >Erscheinungsjahr <input class="feld" type="number" name="jahr" min="0"></div><br>
-								 <div class="schrifft_gross" >Auflage <input class="feld" type="number" name="auflage" min="0"></div><br><br>
+								 <div class="schrifft_gross" >Kapitel <input class="feld" type="number" name="kapitel" min="1"></div><br>
+								 <div class="schrifft_gross" >Erscheinungsjahr <input class="feld" type="number" name="jahr" min="1"></div><br>
+								 <div class="schrifft_gross" >Auflage <input class="feld" type="number" name="auflage" min="1"></div><br><br>
 							</div>
 							
 							
