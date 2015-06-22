@@ -43,7 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	fwrite($handle,"\r\n");
 	fclose($handle);
 	
-	
+	?>
+			<script type="text/javascript">  alert("Daten wurden erfolgreich in der TEXT Datei gespeichert !") ;
+											location.replace("http://localhost/Meilenstein5/html/book_entry.html");
+			</script>
+	<?php
 
 }else{
 	echo 'fehler' ;

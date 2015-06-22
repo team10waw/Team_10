@@ -11,13 +11,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)){
 	$fehler = false ;
 	
 	function test_input($data) {
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
+		$data = trim($data);     // Leerzeichen vor und nach Eingaben wegmachen
+		$data = stripslashes($data);    // Entfernt Maskierungszeichen aus der Eingabe
+		$data = htmlspecialchars($data);  // Wandelt Sonderzeichen in HTML
 		return $data;
 	}
 	
+	
 	// Vornam, Nachname und Buchautor dürfen nur Buchsteiben sein
+	
 	$vorname = test_input($_POST['vorname']) ;
 	if (!preg_match("/^[a-zäöüßA-ZÄÖÜ ]*$/",$vorname)) {
        $fehler = true ; 
@@ -38,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)){
      }elseif($autor == ""){
 		$fehler = true ; 
 	 }
+	
 	
 	// ISBN darf maximal 13 Zeichen sein
 	
@@ -68,6 +71,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)){
      }elseif($auflage < 0){
 		$fehler = true ; 
 	 }
+	 
+	 
+	 //Titel muss eingegeben werden
+	 
+	 $titel = test_input($_POST['titel']) ;
+	 if ($titel == "") {
+       $fehler = true ; 
+     }
+	 
 	
    // im Korrekten Fall werden Daten in der DB gespeichern
 	
@@ -96,10 +108,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)){
 	
 	}else{
 		?>
-			<script type="text/javascript"> alert("Einige Eingaben sind fehlerhaft. Bitte ueberpruefen Sie ihre Eingaben"); </script>
+			<script type="text/javascript"> alert("Einige Eingaben sind fehlerhaft. Bitte ueberpruefen Sie ihre Eingaben"); 
+											location.replace("http://localhost/Meilenstein6/html/book_entry.html");
+			</script>
 		<?php
-		header("file:///C:/Apache24/htdocs/Meilenstein6/html/book_entry.html") ;
-		exit() ;
+		
+		
 	}	
 
 }else{
